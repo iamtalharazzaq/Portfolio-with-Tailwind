@@ -10,26 +10,43 @@
     <script src="./tailwind.config.js"></script>
 </head>
 
-<body>
+<body class="overflow-x-hidden">
+    <!-- Navbar -->
     <nav class="w-full flex justify-between xl:px-[8%] z-50 fixed items-center p-5 lg:px-8">
-        <img class="w-36 h-14 cursor-pointer" src="./images/logo.png" alt="Logo">
+        <img class="w-38 h-16 cursor-pointer" src="./images/logo.png" alt="Logo">
         <ul class="hidden md:flex gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-45">
             <li><a href="#home">Home</a></li>
             <li><a href="#aboutMe">About Me</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#personalProjects">Personal Projects</a></li>
             <li><a href="#contacts">Contact</a></li>
-            <li><a href="#resume"></a></li>
         </ul>
-        <div class="flex items-center ">
-            <button> 
-                <i class="w-6 fa-solid fa-moon"></i>
+        <div class="flex items-center justify-center gap-2">
+            <button class="mt-1">
+                <i class="fa-2x fa-regular fa-moon"></i>
             </button>
             <button class="hidden lg:flex gap-3 items-center px-6 py-2.5 border-gray-500 rounded-full border">
-                <i class="fa-solid fa-download"></i> Resume
+                <i class=" fa-solid fa-download"></i> Resume
+            </button>
+            <button class="block md:hidden ml-3" onclick=openMenu()>
+                <i class="fa-2x fa-solid fa-bars"></i>
             </button>
         </div>
+
+        <!-- Menu for mobile -->
+        <ul id="side"
+            class="flex py-16 px-10 flex-col bg-green-600 fixed -right-64 top-0 bottom-0 w-48 h-screen z-0 transition duration-500 md:hidden">
+           <button class="fixed top-6 right-6" onclick=closeMenu()>
+            <i class="fa-2x fa-solid fa-xmark"></i>
+           </button>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aboutMe">About Me</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#personalProjects">Personal Projects</a></li>
+            <li><a href="#contacts">Contact</a></li>
+        </ul>
     </nav>
+    <script src="./script.js"></script>
 </body>
 
 </html>
