@@ -1,0 +1,8 @@
+# Handle line endings automatically for files detected as text
+* text=auto
+
+# Define file types that should always have LF line endings
+*.sh text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.json text eol=lf
