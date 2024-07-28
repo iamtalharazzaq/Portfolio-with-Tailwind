@@ -7,15 +7,16 @@
     <title>Talلha</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.tailwindcss.com" rel="stylesheet"></script>
-    <!-- <script src="./tailwind.config.js"></script> --> 
+    <!-- <script src="./tailwind.config.js"></script> -->
     <link href="public/tailwind.css" rel="stylesheet">
 </head>
 
 <body class="overflow-x-hidden">
     <!-- Navbar -->
-    <nav class="w-full flex justify-between xl:px-[8%] z-50 fixed items-center p-5 lg:px-8">
-        <img class="w-40 h-18 cursor-pointer" src="./images/logo.png" alt="Logo">
-        <ul class="hidden md:flex gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-45">
+    <nav class="w-full flex justify-between xl:px-[8%] z-50 fixed items-center p-5 lg:px-8 sm:bg-white">
+       <a href="#home"><img  class="w-40 h-18 cursor-pointer" src="./images/logo.png" alt="Logo"></a> 
+        <ul class="hidden md:flex gap-6 lg:gap-8 rounded-full px-12 py-3 bg-gray-100 bg-opacity-45
+        indicator overflow-hidden shadow-xl transition border">
             <li><a href="#home">Home</a></li>
             <li><a href="#aboutMe">About Me</a></li>
             <li><a href="#services">Services</a></li>
@@ -26,7 +27,8 @@
             <button class="mt-1">
                 <i class="fa-2x fa-regular fa-moon"></i>
             </button>
-            <a href="#" download  class="hidden lg:flex gap-3 items-center px-6 py-2.5 border-gray-500 rounded-full border" >
+            <a href="#" 
+                class="hidden lg:flex gap-3 items-center px-6 py-2.5 border-gray-500 rounded-full border">
                 <i class="fa-brands fa-github"></i> Github
             </a>
             <button class="block md:hidden ml-3" onclick=openMenu()>
@@ -38,7 +40,7 @@
         <ul id="side"
             class="flex py-16 px-10 flex-col bg-green-300 fixed -right-64 top-0 bottom-0 w-48 h-screen z-0 transition duration-500 md:hidden">
             <button class="absolute top-6 right-6" onclick="closeMenu()">
-            <i class="fa-2x fa-solid fa-xmark"></i>
+                <i class="fa-2x fa-solid fa-xmark"></i>
             </button>
             <li><a href="#home">Home</a></li>
             <li><a href="#aboutMe">About Me</a></li>
@@ -49,18 +51,63 @@
     </nav>
 
     <!-- Header -->
-    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center">
-        <img src="./images/image.png" class="rounded-full w-36" alt="">
-        <h3 class="flex items-end text-xl md:text-2xl mb-3">Hi, I am Talha Razzaq</h3>
-        <h1 class="text-3xl md:text-5xl lg:text-5xl mb-3 lg:w-max md:lg:w-max">Software Engineer | Polyglot Developer</h1>
-        <p class="max-w-2xl mx-auto">I'm a software engineer from Lahore, Pakistan, with three years of experience across a range of projects. I specialize in delivering innovative solutions using a variety of technologies.
+    <div id="home" class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center">
+        <img src="./images/image.png" class="rounded-full w-36 " alt="">
+        <h3 href="https://git.io/typing-svg">
+            <img src="https://readme-typing-svg.demolab.com?font=Noto+Sans&weight=600&size=40&pause=1000&color=588B76&center=true&width=600&height=100&lines=Hello+%F0%9F%91%8B%2C+I'm+Talha+Razzaq"
+                alt="Typing SVG" />
+        </h3>
+        <h1 class="text-3xl md:text-5xl lg:text-5xl mb-3 lg:w-max md:lg:w-max">
+            Software Engineer | Polyglot Developer
+        </h1>
+        <p class="max-w-2xl mx-auto">I'm a software engineer from Lahore, Pakistan, with three years of experience
+            across a range of projects. I specialize in delivering innovative solutions using a variety of technologies.
         </p>
-    
-        <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
-            <a href="#contact" class="bg-customGreen mt-3 px-10 py-3 border rounded-full text-black flex items-center">Contact Me</a>
-            <a href="#contact" class=" mt-3 px-10 py-3 gap-3 border rounded-full text-black flex items-center"><i class=" fa-solid fa-download"></i> Resume</a>
+        <div class="flex flex-col sm:flex-row items-center gap-4">
+            <a href="#contact"
+                class="bg-customGreen mt-3 px-10 py-3 border rounded-full text-black flex items-center">Contact Me</a>
+            <a href="#contact" class=" mt-3 px-10 py-3 gap-3 border rounded-full text-black flex items-center"><i
+                    class=" fa-solid fa-download"></i> Resume</a>
         </div>
-    
+    </div>
+
+
+    <!-- About Me -->
+    <div id="aboutMe" class="w-full px-[12%] pt-[4%]">
+        <h4 class="text-center  text-lg">Introduction</h4>
+        <h2 class="text-center text-5xl">About me</h2>
+        <div class="flex w-full flex-col lg:flex-row items-center gap-10 mb-20 mt-10">
+            <div class="max-w-max mx-auto relative"><img src="./images/introImage.jpg"
+                    class="w-72 rounded-3xl max-w-none" alt=""></div>
+            <div class="flex-1">
+                <p class="mb-10 max-w-2xl">I am a dynamic software engineer with over three years of professional
+                    experience. My expertise lies in crafting robust algorithms and devising innovative solutions to
+                    tackle complex technical challenges. I am actively engaged in the design, implementation, and
+                    maintenance of software solutions that drive efficiency and innovation.
+
+                    <br>
+                    I thrive in environments that encourage continuous learning and development. I am dedicated to
+                    leveraging my skills to contribute to the achievement of organizational goals, and I am eager to
+                    explore new opportunities within a forward-thinking company.
+
+
+                </p>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
+                    <li
+                        class="border-[0.5px] rounded-xl p-6 duration-500 hover:shadow-xl hover:translate-y-1 cursor-pointer hover:bg-gray-100">
+                        <i class="fa-2x fa-solid fa-code"></i>
+                        <h3 class="font-semibold text-gray-700 mb-3">Languages</h3>
+                        <p class="text-gray-600 text-sm">C/C++, Javascript, Golang and Node</p>
+                    </li>
+                    <li
+                        class="border-[0.5px] rounded-xl p-6 duration-500 hover:shadow-xl hover:translate-y-1 cursor-pointer hover:bg-gray-100">
+                        <i class="fa-2x fa-solid fa-graduation-cap"></i>
+                        <h3 class="font-semibold text-gray-700 mb-3">Education</h3>
+                        <p class="text-gray-600 text-sm">Bachelor in Computer Science</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <script src="./scripts/index.js"></script>
